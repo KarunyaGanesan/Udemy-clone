@@ -52,12 +52,31 @@ body{
     color: 2px solid beige;
     
 }
+.sale img{
+    width:100%;
+    
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 .sale__desc{
     position: absolute;
     top: 100px;
     left: 80px;
-    border: gray 5px solid;
+    border: gray 2px solid;
     padding: 15px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    background-color: white;
+    opacity: 0;
 }
 .MyLearning{
     position: relative;
@@ -88,7 +107,8 @@ body{
     justify-content: space-evenly;
     width: 100%;
     padding: 7px;
-    border-bottom: 1px solid black;     
+    border-bottom: 1px solid black;    
+
 }
 .Categories p{
     background-color: #D95BFF;
@@ -96,10 +116,14 @@ body{
     color: white;
     border-radius: 20px;
     padding: 9px;
+    cursor: pointer;
 }
-.sale img{
-    width:100%;
+.Categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: #D95BFF;
 }
+
 .Recommended{
     padding: 10px;
 }
